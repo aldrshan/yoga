@@ -86,7 +86,6 @@ const yogaPoses = {
     //add more workouts as needed and update index.html
 };
 
-
 const startPauseButton = document.getElementById('start-button');
 const workoutSelect = document.getElementById('workout-select');
 const timerElement = document.getElementById('time');
