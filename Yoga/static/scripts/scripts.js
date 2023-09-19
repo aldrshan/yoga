@@ -10,6 +10,7 @@ const yogaPoses = {
         { name: "Mountain Pose", image: "static/img/mountain.jpg" },
         { name: "Standing Forward Bend", image: "static/img/standing_forward_bend.jpg" },
         { name: "Halfway Lift", image: "static/img/halfway_lift.jpg" },
+
     ],
     day2: [
         { name: "Easy Pose", image: "static/img/easy_pose.jpg" },
