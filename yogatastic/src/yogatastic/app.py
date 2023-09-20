@@ -120,7 +120,7 @@ class YogaTastic(toga.App):
 
     def update_image(self, widget):
         # Get the selected day from the dropdown
-        selected_day = widget.value.lower()  # This will give values like 'day1', 'day2', etc.
+        selected_day = widget.value.lower().replace(" ", "")  # This will give values like 'day1', 'day2', etc.
 
         # Get the first pose of the selected day
         first_pose = self.yoga_poses[selected_day][0]
