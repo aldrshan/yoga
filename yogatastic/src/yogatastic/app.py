@@ -56,7 +56,6 @@ class YogaTastic(toga.App):
                 {'name': "Warrior I (Right)", 'image': "resources/img/warrior_one.jpg"},
                 {'name': "Warrior I (Left)", 'image': "resources/img/warrior_one.jpg"},
             ],
-
             'day5': [
                 {'name': "Warrior II (Right)", 'image': "resources/img/warrior_two.jpg"},
                 {'name': "Warrior II (Left)", 'image': "resources/img/warrior_two.jpg"},
@@ -93,21 +92,19 @@ class YogaTastic(toga.App):
                 {'name': "Plow Pose", 'image': "resources/img/plow_pose.jpg"},
                 {'name': "Corpse Pose", 'image': "resources/img/corpse_pose.jpg"},
             ],
-
         }
 
-        self.current_pose_index = 0
-        self.selected_day = 'day1'
+        current_pose_index = 0
+        selected_day = 'day1'
+        current_time = 60  # 1 minute in seconds
+        timer_running = False
+
 
         # UI Elements
         self.pose_image = toga.ImageView('resources/img/childs_pose.jpg')
         self.workout_select = toga.Selection(items=[f"Day {i}" for i in range(1, 8)], on_select=self.update_image)
         self.start_pause_button = toga.Button('Start', on_press=self.start_pause)
         self.timer_label = toga.Label('01:00')
-        # Timer attributes
-        self.current_time = 60  # 1 minute in seconds
-        self.timer_running = False
-
 
         # Layout
         box = toga.Box(
@@ -129,31 +126,21 @@ class YogaTastic(toga.App):
             mins, secs = divmod(self.current_time, 60)
             timeformat = '{:02d}:{:02d}'.format(mins, secs)
             self.timer_label.text = timeformat
-            time.sleep(1)
+            time.sleep(60)  # Sleep for 1 minute
             self.current_time -= 1
 
         if self.current_time == 0:
             self.start_pause(self.start_pause_button)
 
-
     def update_image(self, widget):
-        # Get the selected day from the dropdown
-        selected_day = widget.value.lower().replace(" ", "")  # This will give values like 'day1', 'day2', etc.
-
-        # Get the first pose of the selected day
+        selected_day = widget.value.lower().replace(" ", "")
         first_pose = self.yoga_poses[selected_day][0]
-
-        # Update the image
         self.pose_image.image = toga.Image(first_pose['image'])
         print(f"Selected day: {selected_day}, Image path: {first_pose['image']}")
-
-        # Reset the timer when a new day is selected
         self.current_time = 60
         self.timer_label.text = '01:00'
 
-
     def start_pause(self, widget):
-        # Check the label of the button to determine the action
         if widget.label == "Start":
             self.timer_running = True
             self.timer_thread = threading.Thread(target=self.countdown)
@@ -162,16 +149,6 @@ class YogaTastic(toga.App):
         else:
             self.timer_running = False
             widget.label = "Start"
-
-
-            # Change the button label to "Pause"
-            widget.interface.label = "Pause"
-        else:
-            # Pause the sequence
-            # Here, you can pause the timer
-            # Change the button label back to "Start"
-            widget.interface.label = "Start"
-
 
 def main():
     return YogaTastic()
