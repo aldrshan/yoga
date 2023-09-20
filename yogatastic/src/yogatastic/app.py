@@ -131,7 +131,7 @@ class YogaTastic(toga.App):
 
     def start_pause(self, widget):
         # Check the label of the button to determine the action
-        if widget.label == "Start":
+        if widget.interface.label == "Start":
             # Start the sequence
             # Here, you can implement a timer to switch poses at regular intervals
             # For now, let's just switch to the next pose every time the button is pressed
@@ -139,12 +139,13 @@ class YogaTastic(toga.App):
             self.pose_image.image = toga.Image(self.yoga_poses[self.selected_day][self.current_pose_index]['image'])
 
             # Change the button label to "Pause"
-            widget.label = "Pause"
+            widget.interface.label = "Pause"
         else:
             # Pause the sequence
             # Here, you can pause the timer
             # Change the button label back to "Start"
-            widget.label = "Start"
+            widget.interface.label = "Start"
+
 
 def main():
     return YogaTastic()
