@@ -124,15 +124,20 @@ class YogaTastic(toga.App):
 
     def countdown(self):
         try:
-            while self.current_time > 0 and self.timer_running:
+            while self.timer_running:
+                if self.current_time == 0:
+                    # Move to the next pose
+                    self.current_pose_index = (self.current_pose_index + 1) % len(self.yoga_poses[self.selected_day])
+                    next_pose = self.yoga_poses[self.selected_day][self.current_pose_index]
+                    self.main_window.app.app_context.loop.call_soon_threadsafe(self.pose_image.set_image, toga.Image(next_pose['image']))
+                    # Reset the timer to 1 minute
+                    self.current_time = 60
+
                 mins, secs = divmod(self.current_time, 60)
                 timeformat = '{:02d}:{:02d}'.format(mins, secs)
-                self.timer_label.text = timeformat
-                time.sleep(60)  # Sleep for 1 minute
+                self.main_window.app.app_context.loop.call_soon_threadsafe(self.timer_label.set_text, timeformat)
+                time.sleep(1)  # Sleep for 1 second
                 self.current_time -= 1
-
-            if self.current_time == 0:
-                self.start_pause(self.start_pause_button)
         except Exception as e:
             print(f"Error in countdown: {e}")
 
@@ -147,9 +152,10 @@ class YogaTastic(toga.App):
 
     def start_pause(self, widget):
         if widget.text == "Start":
-            self.timer_running = True
-            self.timer_thread = threading.Thread(target=self.countdown)
-            self.timer_thread.start()
+            if not self.timer_running:
+                self.timer_running = True
+                self.timer_thread = threading.Thread(target=self.countdown)
+                self.timer_thread.start()
             widget.text = "Pause"
         else:
             self.timer_running = False
