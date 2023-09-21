@@ -141,14 +141,15 @@ class YogaTastic(toga.App):
         self.timer_label.text = '01:00'
 
     def start_pause(self, widget):
-        if widget.label == "Start":
+        if widget.text == "Start":
             self.timer_running = True
             self.timer_thread = threading.Thread(target=self.countdown)
             self.timer_thread.start()
-            widget.label = "Pause"
+            widget.text = "Pause"
         else:
             self.timer_running = False
-            widget.label = "Start"
+            widget.text = "Start"
+
 
 def main():
     return YogaTastic()
