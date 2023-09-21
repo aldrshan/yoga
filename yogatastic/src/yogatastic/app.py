@@ -123,15 +123,19 @@ class YogaTastic(toga.App):
         self.main_window.show()
 
     def countdown(self):
-        while self.current_time > 0 and self.timer_running:
-            mins, secs = divmod(self.current_time, 60)
-            timeformat = '{:02d}:{:02d}'.format(mins, secs)
-            self.timer_label.text = timeformat
-            time.sleep(60)  # Sleep for 1 minute
-            self.current_time -= 1
+        try:
+            while self.current_time > 0 and self.timer_running:
+                mins, secs = divmod(self.current_time, 60)
+                timeformat = '{:02d}:{:02d}'.format(mins, secs)
+                self.timer_label.text = timeformat
+                time.sleep(60)  # Sleep for 1 minute
+                self.current_time -= 1
 
-        if self.current_time == 0:
-            self.start_pause(self.start_pause_button)
+            if self.current_time == 0:
+                self.start_pause(self.start_pause_button)
+        except Exception as e:
+            print(f"Error in countdown: {e}")
+
 
     def update_image(self, widget):
         selected_day = widget.value.lower().replace(" ", "")
