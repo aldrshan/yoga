@@ -94,10 +94,11 @@ class YogaTastic(toga.App):
             ],
         }
 
-        current_pose_index = 0
-        selected_day = 'day1'
-        current_time = 60  # 1 minute in seconds
-        timer_running = False
+        self.current_pose_index = 0
+        self.selected_day = 'day1'
+        self.current_time = 60  # 1 minute in seconds
+        self.timer_running = False
+
 
 
         # UI Elements
