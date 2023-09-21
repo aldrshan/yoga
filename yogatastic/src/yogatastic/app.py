@@ -129,13 +129,13 @@ class YogaTastic(toga.App):
                     # Move to the next pose
                     self.current_pose_index = (self.current_pose_index + 1) % len(self.yoga_poses[self.selected_day])
                     next_pose = self.yoga_poses[self.selected_day][self.current_pose_index]
-                    self.main_window.app.app_context.loop.call_soon_threadsafe(self.pose_image.set_image, toga.Image(next_pose['image']))
+                    toga.App.invoke_on_main_thread(self.pose_image.set_image, toga.Image(next_pose['image']))
                     # Reset the timer to 1 minute
                     self.current_time = 60
 
                 mins, secs = divmod(self.current_time, 60)
                 timeformat = '{:02d}:{:02d}'.format(mins, secs)
-                self.main_window.app.app_context.loop.call_soon_threadsafe(self.timer_label.set_text, timeformat)
+                toga.App.invoke_on_main_thread(self.timer_label.set_text, timeformat)
                 time.sleep(1)  # Sleep for 1 second
                 self.current_time -= 1
         except Exception as e:
