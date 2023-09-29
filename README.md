@@ -4,6 +4,8 @@
 This is a minimalistic yoga app. After selecting a routine a gong will sound every minute and display a new pose.
 This is all HTML, CSS, and JS inside of a flask application. 
 You can fork the repo and create a venv to run it. 
+I do not wish to pay to provide this to others for free so I am trying to convert this to a mobile app or desktop app that anyone can easily install. 
+If you wish to run this now you can do a pull request, and, well just youtube run a repository on your computer.
 
 #What I'm working on.
 
