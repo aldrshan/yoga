@@ -13,6 +13,7 @@ Installation
     Prerequisites: Ensure you have Python and virtualenv installed.
     Setup: Fork the repository, set up a virtual environment (venv), and install dependencies.
     Running the App: Detailed instructions are provided for pulling the repository and running the app locally.
+    Upon completion a site name will be chosen and implemented allowing users to easily access this. 
 
 Current Progress
 
