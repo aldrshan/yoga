@@ -6,7 +6,6 @@ Features
 
     Routine Selection: Users can choose from a variety of yoga routines.
     Pose Transitions: A calming gong sound signals every minute to indicate the next pose.
-    Offline Capability: The future goal is to enable offline use for convenience and flexibility.
 
 Installation
 
