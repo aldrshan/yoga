@@ -15,8 +15,9 @@ Installation
 
 Current Progress
 
-    BeeWare Integration: Efforts are underway to utilize BeeWare for native app conversion, although challenges with documentation and JavaScript compatibility are being addressed.
-    Alternatives: Exploration into Flutter and Kivy for their robust ecosystems and documentation, especially for creating reliable timers.
+    ~~BeeWare Integration: Efforts are underway to utilize BeeWare for native app conversion, although challenges with documentation and JavaScript compatibility are being addressed.
+    Alternatives: Exploration into Flutter and Kivy for their robust ecosystems and documentation, especially for creating reliable timers.~~
+Just going to redo in Django so I can add a proper DB, Login, and so on.
 
 Contribution
 
