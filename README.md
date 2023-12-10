@@ -1,4 +1,4 @@
-YogaFlow: A Minimalistic Yoga Routine App
+YogaFlow, Yogatastic, yoga... I don't have a good name yet: It's a Minimalistic Yoga Routine App
 Overview
 
 YogaFlow is a minimalistic web-based yoga app designed to guide users through various yoga routines. By integrating HTML, CSS, and JavaScript within a Flask application, it provides a serene and distraction-free yoga experience. A resonating gong marks the transition between poses every minute, facilitating a smooth flow through the session.
