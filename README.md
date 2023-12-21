@@ -26,3 +26,7 @@ Vision
 
     Routine Customization: Plans to implement a feature for creating personalized yoga routines.
     Community Input: Encouragement of community contributions to enrich the app's functionalities.
+
+Things to consider including
+    https://github.com/Mitali-Juvekar/Yoga_Recommender
+    
