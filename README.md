@@ -7,20 +7,13 @@ Features
     Routine Selection: Users can choose from a variety of yoga routines. This is to be provided by AI and implemented with the users approval.
     Pose Transitions: A calming gong sound signals every minute to indicate the next pose.
 
-Installation
-
-    Prerequisites: Ensure you have Python and virtualenv installed.
-    Setup: Fork the repository, set up a virtual environment (venv), and install dependencies.
-    Upon completion of the project a site name will be chosen and implemented allowing users to easily access this. 
-
 Current Progress
 
     Working on LLM integration on other projects. Once I have that in I can integrate into this. The goal being to have an llm interactive routine developed for the individual.
 
 Contribution
 
-    Running Locally: Instructions for pull requests and local setup are included.
-    Issues & Enhancements: Guidelines on how to report issues or suggest enhancements.
+   Please message me if you would like to contribute.
 
 Vision
 
