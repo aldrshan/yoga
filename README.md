@@ -4,7 +4,9 @@ Overview
 YogaFlow is a minimalistic web-based yoga app designed to guide users through various yoga routines. By integrating HTML, CSS, and JavaScript within a Flask application, it provides a serene and distraction-free yoga experience. A resonating gong marks the transition between poses every minute, facilitating a smooth flow through the session.
 Features
 
-    Routine Selection: Users can choose from a variety of yoga routines. This is to be provided by AI and implemented with the users approval.
+    Routine Selection: 
+    Users can choose from a variety of preset yoga routines. 
+    Alternatively users can create their own routines or use the assistance of AI to create custom routines..
     Pose Transitions: A calming gong sound signals every minute to indicate the next pose.
 
 Current Progress
