@@ -23,6 +23,9 @@ Vision
     Community Input: Encouragement of community contributions to enrich the app's functionalities.
 
 Things to consider including
+
     https://github.com/Mitali-Juvekar/Yoga_Recommender
+    
     https://github.com/LunaticPrakash/yoga-api
+    
     https://github.com/bourbonbourbon/yoga-pose-detection-correction
