@@ -12,6 +12,7 @@ Features
 Current Progress
 
     Working on LLM integration on other projects. Once I have that in I can integrate into this. The goal being to have an llm interactive routine developed for the individual.
+    Also working on transition effects.
 
 Contribution
 
