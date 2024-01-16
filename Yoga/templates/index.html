@@ -7,25 +7,36 @@
     <link rel="icon" href="{{ url_for('static', filename='favicon-32x32.png') }}" type="image/png" sizes="32x32">
     <link rel="stylesheet" href="{{ url_for('static', filename='content/site.css') }}">
     <script src="{{ url_for('static', filename='scripts/scripts.js') }}" defer></script>
+    <style>
+        .centered-container {
+            text-align: center;
+            margin: auto;
+        }
+
+        .button-group {
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
 </head>
+
 <body>
-    <h1 id="pose-title">Yoga Routine</h1>
-    <div class="yoga-container">
-        <img id="yoga-image" class="responsive-image" src="{{ url_for('static', filename='img/childs_pose.jpg') }}" alt="Child's Pose" />
-        <div class="timer">
-            <span id="time">00:00</span>
+    <div class="centered-container">
+        <h1 id="pose-title">Yoga Routine</h1>
+        <div class="yoga-container">
+            <img id="yoga-image" class="responsive-image" src="{{ url_for('static', filename='img/childs_pose.jpg') }}" alt="Child's Pose" />
+            <div class="timer">
+                <span id="time">00:00</span>
+            </div>
+        </div>
+        <div class="button-group">
+            <select id="workout-select">
+                <!-- ... options ... -->
+            </select>
+            <button id="start-button">Start</button>
+            <!-- Build a Routine Button -->
+            <a href="{{ url_for('yoga_builder') }}" class="btn btn-secondary">Build a Routine</a>
         </div>
     </div>
-    <select id="workout-select">
-        <option value="workout1">Workout 1</option>
-        <option value="workout2">Workout 2</option>
-        <option value="workout3">Workout 3</option>
-        <option value="workout4">Workout 4</option>
-        <option value="workout5">Workout 5</option>
-        <option value="workout6">Workout 6</option>
-        <option value="workout7">Workout 7</option>
-        <!-- Add more workouts as needed and update scripts.js -->
-    </select>
-    <button id="start-button">Start</button>
 </body>
 </html>

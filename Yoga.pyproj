@@ -113,6 +113,7 @@
     <Content Include="Yoga\templates\contact.html" />
     <Content Include="Yoga\templates\index.html" />
     <Content Include="Yoga\templates\layout.html" />
+    <Content Include="Yoga\templates\yoga_builder.html" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="yoga_env\">
