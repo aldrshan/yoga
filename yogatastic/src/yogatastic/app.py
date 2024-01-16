@@ -4,6 +4,24 @@ from toga.style.pack import COLUMN, ROW
 import threading
 import time
 import queue
+from flask import Flask, render_template, request
+import openai
+
+app = Flask(__name__)
+
+@app.route('/yoga_builder', methods=['GET', 'POST'])
+def yoga_builder():
+    routine = ""
+    if request.method == 'POST':
+        user_input = request.form['user_input']
+        response = openai.Completion.create(
+            engine="text-davinci-004",
+            prompt=f"Create a yoga routine based on the following preferences: {user_input}",
+            max_tokens=150
+        )
+        routine = response.choices[0].text.strip()
+
+    return render_template('yoga_builder.html', routine=routine)
 
 class YogaTastic(toga.App):
 
