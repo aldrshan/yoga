@@ -10,7 +10,6 @@ Features
     Pose Transitions: A calming gong sound signals every minute to indicate the next pose.
 
 Current Progress
-354fsvksujgdhvbj,ydzbskfv,jb,zjrbvbkSBfkbbskdiuikkdbczsdvbjSBDvknOEENc,Zncuwbfc
     Working on LLM integration on other projects. Once I have that in I can integrate into this. The goal being to have an llm interactive routine developed for the individual.
     Also working on transition effects.
 
