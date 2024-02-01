@@ -1,5 +1,3 @@
-353552+
-
 YogaFlow, Yogatastic, yoga... I don't have a good name yet: It's a Minimalistic Yoga Routine App
 Overview
 
