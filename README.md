@@ -1,5 +1,3 @@
-i NEED MORE HOURS IN THE DAY!
-
 YogaFlow, Yogatastic, yoga... 
 I don't have a good name yet: It's a Minimalistic Yoga Routine App
 If you have any suggestions or features you would like to see please let me know.
